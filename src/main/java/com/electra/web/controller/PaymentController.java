@@ -73,6 +73,5 @@ public class PaymentController extends HttpServlet {
 
         request.getRequestDispatcher("confirmation.jsp").forward(request, response);
 
-
     }
 }

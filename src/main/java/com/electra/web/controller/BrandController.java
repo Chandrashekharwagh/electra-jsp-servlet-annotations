@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 @WebServlet("/brand")
 public class BrandController extends HttpServlet {
-    private final BrandService brandService =new BrandService();
+    private final BrandService brandService = new BrandService();
 
 
     @Override
@@ -37,7 +37,6 @@ public class BrandController extends HttpServlet {
         brand.setDescription(description);
 
 
-
         try {
             boolean isInserted = brandService.insertBrands(brand);
             response.setContentType("text/html");
@@ -57,17 +56,4 @@ public class BrandController extends HttpServlet {
 
 
     }
-    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("--------------- inside the service() method ---------------");
-        if (request.getMethod().equals("POST")) {
-            this.doPost(request, response);
-        } else {
-            this.doGet(request, response);
-        }
-    }
-
-    public void destroy() {
-        System.out.println("--------------- inside the destroy() method ---------------");
-    }
-
 }
