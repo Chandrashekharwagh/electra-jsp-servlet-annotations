@@ -10,7 +10,7 @@
     <div class="container">
         <div class="form-container">
             <h2>Address Form</h2>
-            <form action="/electra/addressController" method="POST">
+            <form action="address" method="POST">
 
             <div class="form-group">
                 <label for="id">Id:</label>
