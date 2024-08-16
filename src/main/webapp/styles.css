@@ -1,25 +1,3 @@
-body {
-   font-family: Arial, sans-serif;
-       background-color: #f4f4f4;
-       background-image: url('"C:\Users\waghc\OneDrive\Documents\MSI BLK.jpeg"'); /* Replace with your image URL */
-       background-size: cover; /* Optional: Scale the background image to be as large as possible */
-       margin: 0;
-       padding: 0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 100vh;
-}
-
-.form-container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    width: 100%;
-    max-width: 420px;
-    animation: fadeIn 0.8s ease-out;
-}
 
 .form-header {
     background-color: #4a90e2;
