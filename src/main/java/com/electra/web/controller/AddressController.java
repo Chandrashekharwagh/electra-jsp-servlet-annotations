@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/address")
@@ -22,7 +21,7 @@ public class AddressController extends HttpServlet {
         // list of Addresses for demonstration purposes
         List<Address> address;
         try {
-            address =addressService.retrieveAddress();
+            address = addressService.retrieveAddress();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
