@@ -11,7 +11,6 @@
         <div class="form-container">
             <h2>Address Form</h2>
             <form action="address" method="POST">
-
             <div class="form-group">
                 <label for="id">Id:</label>
                  <input type="text" class="form-control" id="id" name="id" required>
@@ -39,6 +38,7 @@
                 </div>
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
+            <a href="DisplayAddresses.jsp" class="btn btn-primary">Show Address</a>
             <a href="index.jsp" class="btn btn-primary">Return to Home</a>
         </div>
     </div>

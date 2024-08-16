@@ -10,15 +10,27 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/address")
 public class AddressController extends HttpServlet {
     private final AddressService addressService = new AddressService();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        request.getRequestDispatcher("AddressForm.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // list of Addresses for demonstration purposes
+        List<Address> address;
+        try {
+            address =addressService.retrieveAddress();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        // Set the list of Addresses as a request attribute
+        request.setAttribute("AddressList", address);
+
+        // Forward the request to the JSP page
+        request.getRequestDispatcher("/DisplayAddresses.jsp").forward(request, response);
     }
 
     @Override

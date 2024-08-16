@@ -11,7 +11,13 @@
         <div class="form-container">
             <h2>Form Submission Confirmation</h2>
             <p>Your submission has been successfully received!</p>
+            <div>
+            <a href="DisplayAddresses.jsp" class="btn btn-primary">Show Address</a>
+            </div>
+
+            <div>
             <a href="index.jsp" class="btn btn-primary">Return to Home</a>
+            </div>
         </div>
     </div>
 </body>
