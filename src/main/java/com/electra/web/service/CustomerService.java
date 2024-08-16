@@ -1,8 +1,10 @@
 package com.electra.web.service;
 
+import com.electra.web.model.Brand;
 import com.electra.web.model.Customer;
 import com.electra.web.repository.CustomerRepository;
 import java.sql.SQLException;
+import java.util.List;
 
 public class CustomerService {
     private static CustomerRepository customerRepository = new CustomerRepository();
@@ -16,6 +18,9 @@ public class CustomerService {
             return false;
         }
         return true;
+    }
+    public List<Customer> retrieveCustomer() throws SQLException {
+        return customerRepository.retrieveCustomers();
     }
 }
 

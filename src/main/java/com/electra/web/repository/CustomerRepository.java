@@ -5,10 +5,9 @@ package com.electra.web.repository;
 import com.electra.web.model.Customer;
 import com.electra.web.service.ConnectionService;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerRepository {
     private static Connection connection;
@@ -48,5 +47,39 @@ public class CustomerRepository {
             e.printStackTrace();
         }
         return false;
+    }
+    public List<Customer> retrieveCustomers() {
+        List<Customer> Customer = new ArrayList<>();
+        // Use the connection to execute SQL queries and interact with the database
+        try {
+            this.initConnection();
+
+            // Your database operations here...
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM customer");
+
+            // Iterate over the result set
+            while (resultSet.next()) {
+                long id = resultSet.getLong("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+
+                // Do something with the data, e.g., print it
+                Customer customer = new Customer(id ,name , email);
+                Customer.add(customer);
+            }
+        } catch (SQLException e) {
+            System.err.println("SQL error: " + e.getMessage());
+        } finally {
+            // Close the connection when done
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    System.err.println("Error closing connection: " + e.getMessage());
+                }
+            }
+        }
+        return Customer;
     }
 }

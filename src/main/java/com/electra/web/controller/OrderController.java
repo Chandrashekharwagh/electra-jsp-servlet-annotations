@@ -4,6 +4,7 @@ package com.electra.web.controller;
 import com.electra.web.model.Order;
 import com.electra.web.service.OrderService;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-
+@WebServlet("/order")
 public class OrderController extends HttpServlet {
     private final OrderService orderService = new OrderService();
 
@@ -71,17 +72,5 @@ public class OrderController extends HttpServlet {
         request.getRequestDispatcher("confirmation.jsp").forward(request, response);
 
 
-    }
-    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("--------------- inside the service() method ---------------");
-        if (request.getMethod().equals("POST")) {
-            this.doPost(request, response);
-        } else {
-            this.doGet(request, response);
-        }
-    }
-
-    public void destroy() {
-        System.out.println("--------------- inside the destroy() method ---------------");
     }
 }

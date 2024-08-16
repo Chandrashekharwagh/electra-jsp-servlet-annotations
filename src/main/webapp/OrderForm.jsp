@@ -10,7 +10,7 @@
     <div class="container">
         <div class="form-container">
             <h2>Orders Form</h2>
-            <form action="/electra/orderController" method="POST">
+            <form action="order" method="POST">
                 <div class="form-group">
                     <label for="id">Order ID:</label>
                     <input type="text" class="form-control" id="id" name="id" required>
@@ -29,6 +29,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <a href="index.jsp" class="btn btn-primary">Return to Home</a>
         </div>
     </div>
 </body>

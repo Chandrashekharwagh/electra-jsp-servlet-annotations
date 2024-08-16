@@ -3,6 +3,7 @@ package com.electra.web.service;
 import com.electra.web.model.Address;
 import com.electra.web.repository.AddressRepository;
 import java.sql.SQLException;
+import java.util.List;
 
 public class AddressService {
 
@@ -16,5 +17,8 @@ public class AddressService {
             return false;
         }
         return true;
+    }
+    public List<Address> retrieveAddress() throws SQLException {
+        return addressRepository.retrieveAddress();
     }
 }

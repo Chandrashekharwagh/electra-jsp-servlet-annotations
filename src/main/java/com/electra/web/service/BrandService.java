@@ -1,8 +1,10 @@
 package com.electra.web.service;
 
+import com.electra.web.model.Address;
 import com.electra.web.model.Brand;
 import com.electra.web.repository.BrandRepository;
 import java.sql.SQLException;
+import java.util.List;
 
 public class BrandService {
 
@@ -17,5 +19,9 @@ public class BrandService {
             return false;
         }
         return true;
+    }
+
+    public List<Brand> retrieveBrand() throws SQLException {
+        return brandRepository.retrieveBrands();
     }
 }

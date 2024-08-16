@@ -39,6 +39,7 @@
                 </div>
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
+            <a href="index.jsp" class="btn btn-primary">Return to Home</a>
         </div>
     </div>
 </body>
