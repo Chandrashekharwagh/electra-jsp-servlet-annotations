@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>Electra App</display-name>
+
+  <!-- Address Form Servlet -->
+  <servlet>
+    <servlet-name>addressController</servlet-name>
+    <servlet-class>com.electra.web.controller.AddressController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addressController</servlet-name>
+    <url-pattern>/addressController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Brand Form Servlet -->
+  <servlet>
+    <servlet-name>brandController</servlet-name>
+    <servlet-class>com.electra.web.controller.BrandController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>brandController</servlet-name>
+    <url-pattern>/brandController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Supplier Form Servlet -->
+  <servlet>
+    <servlet-name>supplierController</servlet-name>
+    <servlet-class>com.electra.web.controller.SupplierController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>supplierController</servlet-name>
+    <url-pattern>/supplierController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Product Form Servlet -->
+  <servlet>
+    <servlet-name>productController</servlet-name>
+    <servlet-class>com.electra.web.controller.ProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>productController</servlet-name>
+    <url-pattern>/productController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Customer Form Servlet -->
+  <servlet>
+    <servlet-name>customerController</servlet-name>
+    <servlet-class>com.electra.web.controller.CustomerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>customerController</servlet-name>
+    <url-pattern>/customerController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Order Form Servlet -->
+  <servlet>
+    <servlet-name>orderController</servlet-name>
+    <servlet-class>com.electra.web.controller.OrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>orderController</servlet-name>
+    <url-pattern>/orderController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Payment Form Servlet -->
+  <servlet>
+    <servlet-name>paymentController</servlet-name>
+    <servlet-class>com.electra.web.controller.PaymentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>paymentController</servlet-name>
+    <url-pattern>/paymentController</url-pattern>
+  </servlet-mapping>
+
+  <!-- Welcome to file -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
