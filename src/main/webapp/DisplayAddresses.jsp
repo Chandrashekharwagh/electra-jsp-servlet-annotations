@@ -7,35 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-image: url('https://t4.ftcdn.net/jpg/07/41/09/09/360_F_741090944_FV8Iik9MccRaDPVd1TxU2y4rdnZw5zcp.jpg');
-                background-size: cover;
-                background-position: center;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t4.ftcdn.net/jpg/07/41/09/09/360_F_741090944_FV8Iik9MccRaDPVd1TxU2y4rdnZw5zcp.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Set text color to white */
+        }
 
-            .form-container {
-                background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                width: 100%;
-                max-width: 500px;
-                animation: fadeIn 0.8s ease-out;
-            }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.1); /* More transparent background */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-out;
+        }
 
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        </style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .table {
+            color: white; /* Set table text color to white */
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.1); /* Lighter stripe for odd rows */
+        }
+
+        .thead-dark th {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark header */
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
