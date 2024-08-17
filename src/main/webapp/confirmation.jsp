@@ -5,6 +5,7 @@
     <title>Confirmation Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <style>
             body {
                 font-family: Arial, sans-serif;
@@ -41,9 +42,8 @@
             <h2>Form Submission Confirmation</h2>
             <p>Your submission has been successfully received!</p>
             <div>
-            <a href="DisplayAddresses.jsp" class="btn btn-primary">Show Address</a>
+            <a href="http://localhost:8080/electra/address" class="btn btn-primary">Show Address</a>
             </div>
-
             <div>
             <a href="index.jsp" class="btn btn-primary">Return to Home</a>
             </div>
