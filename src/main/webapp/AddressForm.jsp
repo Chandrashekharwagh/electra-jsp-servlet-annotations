@@ -96,7 +96,7 @@
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
              <!-- Display Addresses Button -->
-               <a href="DisplayAddresses.jsp" class="icon-button">
+               <a href="http://localhost:8080/electra/address" class="icon-button">
                <span class="material-symbols-outlined">manage_search</span>
              </a>
 

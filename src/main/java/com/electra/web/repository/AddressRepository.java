@@ -51,6 +51,7 @@ public class AddressRepository {
         return false;
     }
     public List<Address> retrieveAddress() {
+        System.out.println("Inside retrieve address repo layer");
         List<Address> addresses = new ArrayList<>();
         // Use the connection to execute SQL queries and interact with the database
         try {
@@ -58,7 +59,9 @@ public class AddressRepository {
 
             // Your database operations here...
             Statement statement = connection.createStatement();
+            System.out.println("Inside retrieve address repo layer before db call");
             ResultSet resultSet = statement.executeQuery("SELECT * FROM address");
+            System.out.println("Inside retrieve address repo after db call layer"+ resultSet);
 
             // Iterate over the result set
             while (resultSet.next()) {
@@ -85,6 +88,7 @@ public class AddressRepository {
                 }
             }
         }
+        System.out.println("Inside retrieve address repo layer before return" + addresses);
         return addresses;
     }
 }

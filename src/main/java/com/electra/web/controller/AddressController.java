@@ -19,14 +19,15 @@ public class AddressController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // list of Addresses for demonstration purposes
-        List<Address> address;
+        List<Address> addresses;
         try {
-            address = addressService.retrieveAddress();
+            System.out.println("Inside / Address");
+            addresses = addressService.retrieveAddress();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         // Set the list of Addresses as a request attribute
-        request.setAttribute("AddressList", address);
+        request.setAttribute("AddressList", addresses);
 
         // Forward the request to the JSP page
         request.getRequestDispatcher("/DisplayAddresses.jsp").forward(request, response);

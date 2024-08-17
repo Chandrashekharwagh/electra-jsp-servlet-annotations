@@ -19,6 +19,7 @@ public class AddressService {
         return true;
     }
     public List<Address> retrieveAddress() throws SQLException {
+        System.out.println("Inside retrieve address service layer");
         return addressRepository.retrieveAddress();
     }
 }
