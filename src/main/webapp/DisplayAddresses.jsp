@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://t4.ftcdn.net/jpg/07/41/09/09/360_F_741090944_FV8Iik9MccRaDPVd1TxU2y4rdnZw5zcp.jpg');
+            background-image: url('https://img.freepik.com/free-photo/blue-background-with-blue-background-text_1340-36583.jpg?t=st=1723881435~exp=1723885035~hmac=15f747b9f2a3acd574ec7dc61675358eec765e0aea22fb163297c7d69dbe58e5&w=1380');
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -18,43 +19,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            color: white; /* Set text color to white */
+            min-height: 100vh;
+            color: white;
         }
-
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.1); /* More transparent background */
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 500px;
+            max-width: 800px;
             animation: fadeIn 0.8s ease-out;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .table {
-            color: white; /* Set table text color to white */
-        }
-
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(255, 255, 255, 0.1); /* Lighter stripe for odd rows */
-        }
-
-        .thead-dark th {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark header */
-            border-color: rgba(255, 255, 255, 0.1);
-        }
+          .table {
+                    color: white;
+                }
+                .table-striped tbody tr:nth-of-type(odd) {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+                .thead-dark th {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    color: white;
+                }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <h2 class="mb-4">List of Addresses</h2>
-        <form action="address" method="GET">
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -79,7 +70,18 @@
                 </c:forEach>
             </tbody>
         </table>
-        <a href="index.jsp" class="btn btn-primary">Return to Home</a>
+        <div class="pagination-container">
+            <c:choose>
+                <c:when test="${currentPage == 1}">
+                    <button class="btn btn-primary disabled" disabled>Previous Page</button>
+                </c:when>
+                <c:otherwise>
+                    <a href="?page=${currentPage - 1}" class="btn btn-primary">Previous Page</a>
+                </c:otherwise>
+            </c:choose>
+            <a href="index.jsp" class="btn btn-primary">Return to Home</a>
+            <a href="?page=${currentPage + 1}" class="btn btn-primary ${currentPage == totalPages ? 'disabled' : ''}">Next Page</a>
+        </div>
     </div>
 </body>
 </html>

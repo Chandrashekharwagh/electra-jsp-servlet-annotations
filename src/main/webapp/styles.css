@@ -1,3 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
 
 .form-header {
     background-color: #4a90e2;
@@ -105,13 +124,63 @@
     animation: rotate 0.5s linear;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 5px;
+}
+
+.pagination-button:hover:not(.disabled) {
+    background-color: #3a7bc8;
+    animation: pulse 0.5s infinite;
+}
+
+.pagination-button:active:not(.disabled) {
+    transform: scale(0.95);
+}
+
+.pagination-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.pagination-info {
+    margin: 0 10px;
+    align-self: center;
+    font-size: 14px;
+    color: #555;
+}
+
 @media (max-width: 480px) {
-    .form-container {
+    .container {
         border-radius: 0;
     }
 
     .form-body {
         padding: 20px;
+    }
+
+    .pagination-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .pagination-info {
+        font-size: 12px;
     }
 }
 
@@ -146,52 +215,4 @@
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-10px); }
     60% { transform: translateY(-5px); }
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-}
-
-.form-container label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-.form-container input, .form-container textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-container input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.form-container input[type="submit"]:hover {
-    background-color: #45a049;
 }
