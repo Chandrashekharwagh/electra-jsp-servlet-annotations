@@ -45,6 +45,9 @@
             <a href="http://localhost:8080/electra/address" class="btn btn-primary">Show Address</a>
             </div>
             <div>
+            <a href="http://localhost:8080/electra/product" class="btn btn-primary">Show Product</a>
+            </div>
+            <div>
             <a href="index.jsp" class="btn btn-primary">Return to Home</a>
             </div>
         </div>
