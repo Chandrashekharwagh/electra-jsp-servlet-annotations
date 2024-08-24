@@ -8,17 +8,6 @@ import java.sql.*;
 
 public class PaymentRepository {
     private static Connection connection;
-
-    public PaymentRepository() {
-        try {
-            // Assuming you're using MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/electra", "root", "chandu@2323");
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void initConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             connection = new ConnectionService().getConnection();

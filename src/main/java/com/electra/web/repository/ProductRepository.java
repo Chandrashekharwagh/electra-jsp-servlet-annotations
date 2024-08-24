@@ -8,15 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepository {
-    public ProductRepository() {
-        try {
-            // Assuming you're using MySQL
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/electra", "root", "chandu@2323");
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-    }
+
     private static Connection connection = null;
 
     private void initConnection() throws SQLException {
