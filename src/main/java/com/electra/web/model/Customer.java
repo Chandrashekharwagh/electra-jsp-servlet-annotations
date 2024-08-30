@@ -8,7 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-
 public class Customer {
     private Long id;
     private String name;
