@@ -85,3 +85,7 @@ Each annotation example is contained in its own package. To run a specific examp
 - Keep URL patterns consistent and logical
 - Use meaningful names for your servlets and filters
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
